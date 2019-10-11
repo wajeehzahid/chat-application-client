@@ -14,11 +14,7 @@ export class SocketService {
     private socket;
 
     public initSocket(): void {
-        this.socket = socketIo(SERVER_URL, {
-          secure: true,
-          rejectUnauthorized: false,
-          path: 'chat/socket.io'
-        });
+        this.socket = socketIo(SERVER_URL);
     }
 
     public send(message: Message): void {
